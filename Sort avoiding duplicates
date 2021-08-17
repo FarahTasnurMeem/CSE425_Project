@@ -1,0 +1,43 @@
+election=
+until [ "$selection" = "0" ]; do
+    echo "
+    PROGRAM MENU : 
+    1 - Sort avoiding duplicates by age:
+    2 - sort  avoiding duplicates by sex :
+    3 -sort  avoiding duplicates by cp:
+    4 -sort  avoiding duplicates by trtbps:
+    5 - Sort avoiding duplicates by chol:
+    6 - Sort  avoiding duplicates by fbs:
+    7 - Sort  avoiding duplicates by restecg:
+    8 - Sort  avoiding duplicates by thalachh:
+    9 - Sort  avoiding duplicates by exng:
+    10 - Sort  avoiding duplicates by oldpeak:
+    11 - sort  avoiding duplicates by slp:
+    12 - sort  avoiding duplicates by caa:
+    13 - sort  avoiding duplicates by thall:
+    14 - sort  avoiding duplicates by output:
+     0 - exit program
+"
+    echo -n "Enter selection: "
+    read selection
+    echo ""
+    case $selection in
+       1) sort -t -u -k1,1 heart.csv ;;
+       2) sort -t -u -k2,2 heart.csv ;;
+       3) sort -t -u -k3,3 heart.csv ;;
+       4) sort -t -u -k4,4 heart.csv ;;
+       5)sort -t -u -k5,5 heart.csv;;
+       6)sort -t -u -k6,6 heart.csv ;;
+       7)sort -t -u -k7,7 heart.csv ;;
+       8)sort -t -u -k8,8 heart.csv ;;
+       9)sort -t -u -k9,9 heart.csv ;;
+       10)sort -t -u -k10,10 heart.csv ;;
+       11) sort -t -u -k11,11 heart.csv ;;
+       12) sort -t -u -k12,12 heart.csv ;;
+       13) sort -t -u -k13,13 heart.csv ;;
+       14) sort -t -u -k14,14 heart.csv ;;
+
+        0 ) exit ;;
+        * ) echo "Please enter 0 to exit"
+    esac
+done
