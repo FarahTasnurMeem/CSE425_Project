@@ -47,7 +47,7 @@ elif [ "$choice" -eq 8 ]; then
      echo "Enter thalachh:"
      read thalachh
      grep "$thalachh" heart.csv
-
+     
 elif [ "$choice" -eq 9 ]; then
      echo "Enter exng:"
      read exng
