@@ -1,0 +1,153 @@
+echo" press 1 to sort in ascending order"
+echo" press 2 to sort in descending order"
+echo"Press 3 to sort deleting duplicates"
+echo"Press 4 to search"
+
+read choice
+
+if [ "$choice" -eq 1 ]; then
+
+#!/bin/bash
+selection=
+until [ "$selection" = "0" ]; do
+    echo "
+    PROGRAM MENU : 
+    1 - Sort in ascending order by age:
+    2 - sort by ascending order by sex :
+    3 -sort by ascending order by cp:
+    4 -sort by ascending order by trtbps:
+    5 - Sort ascending order by chol:
+    6 - Sort ascending order by fbs:
+    7 - Sort ascending order by restecg:
+    8 - Sort ascending order by thalachh:
+    9 - Sort ascending order by exng:
+    10 - Sort ascending order by oldpeak:
+    11 - sort ascending order by slp:
+    12 - sort ascending order by caa:
+    13 - sort ascending order by thall:
+    14 - sort ascending order by output:
+     0 - exit program
+"
+    echo -n "Enter selection: "
+    read selection
+    echo ""
+    case $selection in
+       1) sort -t"," -k1 heart.csv ;;
+       2) sort -t"," -k2 heart.csv ;;
+       3) sort -t"," -k3 heart.csv ;;
+       4) sort -t"," -k4 heart.csv ;;
+       5)sort -t"," -k5 heart.csv;;
+       6)sort -t"," -k6 heart.csv ;;
+       7)sort -t"," -k7 heart.csv ;;
+       8)sort -t"," -k8 heart.csv ;;
+       9)sort -t"," -k9 heart.csv ;;
+       10)sort -t"," -k10 heart.csv ;;
+       11) sort -t"," -k11 heart.csv ;;
+       12) sort -t"," -k12 heart.csv ;;
+       13) sort -t"," -k13 heart.csv ;;
+       14) sort -t"," -k14 heart.csv ;;
+
+        0 ) exit ;;
+        * ) echo "Please enter 1, 2, ... or 0 to exit"
+    esac
+done
+
+
+
+if [ "$choice" -eq 2]; then
+#descending
+
+selection=
+until [ "$selection" = "0" ]; do
+    echo "
+    PROGRAM MENU : 
+    1 - Sort in descending order by age:
+    2 - sort by descending order by sex :
+    3 -sort by descending order by cp:
+    4 -sort by descending order by trtbps:
+    5 - Sort descending order by chol:
+    6 - Sort descending order by fbs:
+    7 - Sort descending order by restecg:
+    8 - Sort descending order by thalachh:
+    9 - Sort descending order by exng:
+    10 - Sort descending order by oldpeak:
+    11 - sort descending order by slp:
+    12 - sort descending order by caa:
+    13 - sort descending order by thall:
+    14 - sort descending order by output:
+     0 - exit program
+"
+    echo -n "Enter selection: "
+    read selection
+    echo ""
+    case $selection in
+       1) sort -t","  -r -k1 heart.csv ;;
+       2) sort -t","  -r -k2 heart.csv ;;
+       3) sort -t"," -k3 heart.csv ;;
+       4) sort -t"," -k4 heart.csv ;;
+       5)sort -t"," -k5 heart.csv;;
+       6)sort -t"," -k6 heart.csv ;;
+       7)sort -t"," -k7 heart.csv ;;
+       8)sort -t"," -k8 heart.csv ;;
+       9)sort -t"," -k9 heart.csv ;;
+       10)sort -t"," -k10 heart.csv ;;
+       11) sort -t"," -k11 heart.csv ;;
+       12) sort -t"," -k12 heart.csv ;;
+       13) sort -t"," -k13 heart.csv ;;
+       14) sort -t"," -k14 heart.csv ;;
+
+        0 ) exit ;;
+        * ) echo "Please enter 15 to exit"
+    esac
+done
+
+#Duplicates cancelled
+
+
+if [ "$choice" -eq 3 ]; then
+
+selection=
+until [ "$selection" = "0" ]; do
+    echo "
+    PROGRAM MENU : 
+    1 - Sort avoiding duplicates by age:
+    2 - sort  avoiding duplicates by sex :
+    3 -sort  avoiding duplicates by cp:
+    4 -sort  avoiding duplicates by trtbps:
+    5 - Sort avoiding duplicates by chol:
+    6 - Sort  avoiding duplicates by fbs:
+    7 - Sort  avoiding duplicates by restecg:
+    8 - Sort  avoiding duplicates by thalachh:
+    9 - Sort  avoiding duplicates by exng:
+    10 - Sort  avoiding duplicates by oldpeak:
+    11 - sort  avoiding duplicates by slp:
+    12 - sort  avoiding duplicates by caa:
+    13 - sort  avoiding duplicates by thall:
+    14 - sort  avoiding duplicates by output:
+     0 - exit program
+"
+    echo -n "Enter selection: "
+    read selection
+    echo ""
+    case $selection in
+       1) sort -t -u -k1,1 heart.csv ;;
+       2) sort -t -u -k2,2 heart.csv ;;
+       3) sort -t -u -k3,3 heart.csv ;;
+       4) sort -t -u -k4,4 heart.csv ;;
+       5)sort -t -u -k5,5 heart.csv;;
+       6)sort -t -u -k6,6 heart.csv ;;
+       7)sort -t -u -k7,7 heart.csv ;;
+       8)sort -t -u -k8,8 heart.csv ;;
+       9)sort -t -u -k9,9 heart.csv ;;
+       10)sort -t -u -k10,10 heart.csv ;;
+       11) sort -t -u -k11,11 heart.csv ;;
+       12) sort -t -u -k12,12 heart.csv ;;
+       13) sort -t -u -k13,13 heart.csv ;;
+       14) sort -t -u -k14,14 heart.csv ;;
+
+        0 ) exit ;;
+        * ) echo "Please enter 15 to exit"
+    esac
+done
+
+fi
