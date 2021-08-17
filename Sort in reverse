@@ -1,0 +1,44 @@
+
+selection=
+until [ "$selection" = "15" ]; do
+    echo "
+    PROGRAM MENU : 
+    1 - Sort in descending order by age:
+    2 - sort by descending order by sex :
+    3 -sort by descending order by cp:
+    4 -sort by descending order by trtbps:
+    5 - Sort descending order by chol:
+    6 - Sort descending order by fbs:
+    7 - Sort descending order by restecg:
+    8 - Sort descending order by thalachh:
+    9 - Sort descending order by exng:
+    10 - Sort descending order by oldpeak:
+    11 - sort descending order by slp:
+    12 - sort descending order by caa:
+    13 - sort descending order by thall:
+    14 - sort descending order by output:
+     0 - exit program
+"
+    echo -n "Enter selection: "
+    read selection
+    echo ""
+    case $selection in
+       1) sort -t","  -r -k1 heart.csv ;;
+       2) sort -t","  -r -k2 heart.csv ;;
+       3) sort -t"," -k3 heart.csv ;;
+       4) sort -t"," -k4 heart.csv ;;
+       5)sort -t"," -k5 heart.csv;;
+       6)sort -t"," -k6 heart.csv ;;
+       7)sort -t"," -k7 heart.csv ;;
+       8)sort -t"," -k8 heart.csv ;;
+       9)sort -t"," -k9 heart.csv ;;
+       10)sort -t"," -k10 heart.csv ;;
+       11) sort -t"," -k11 heart.csv ;;
+       12) sort -t"," -k12 heart.csv ;;
+       13) sort -t"," -k13 heart.csv ;;
+       14) sort -t"," -k14 heart.csv ;;
+
+        0 ) exit ;;
+        * ) echo "Please enter 15 to exit"
+    esac
+done
