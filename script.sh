@@ -53,14 +53,8 @@ echo "46 sort in ascending order with duplicates removed by tribps:"
 echo " 47 sort in ascending order with duplicates removed by chol:"
 echo " 48 sort in ascending order with duplicates removed by fbs:"
 echo " 49  sort in ascending order with duplicates removed by restecg:"
-echo " 50 sort in ascending order with duplicates removed by thalachh:"
-echo " 51 sort in ascending order with duplicates removed by exng:"
-echo " 52 sort in ascending order with duplicates removed by oldpeak:"
-echo " 53 sort in ascending order with duplicates removed by slp:"
-echo " 54 sort in ascending order with duplicates removed by caa:"
-echo " 55 sort in ascending order with duplicates removed by thall:"
-echo " 56 sort in ascending order with duplicates  removedby output:"
-sleep 5
+
+sleep 0
 duration=$(echo "$(date +%s.%N) - $start" | bc)
 execution_time=`printf "%.5f seconds" $duration`
 echo "1 Script Execution Time: $execution_time"
@@ -245,25 +239,4 @@ echo "Script Execution Time: $execution_time"
 elif [ "$choice" -eq 49 ]; then
      sort -t, -u -k7,7 heart.csv
       echo "Script Execution Time: $execution_time" 
-elif [ "$choice" -r -eq 50 ]; then
-    sort -t, -u -k8,8 heart.csv
-      echo "Script Execution Time: $execution_time"
-elif [ "$choice" -eq 51 ]; then
-     sort -t, -u -k9,9 heart.csv
-      echo "Script Execution Time: $execution_time"
-elif [ "$choice" -eq 52 ]; then
-     sort -t, -u -k10,10 heart.csv
-      echo "Script Execution Time: $execution_time"
-elif [ "$choice" -eq 53 ]; then
-    sort -t, -u -k11,11 heart.csv
-    echo "Script Execution Time: $execution_time"
-elif [ "$choice" -eq 54 ]; then
-   sort -t, -u -k12,12 heart.csv
-   echo "Script Execution Time: $execution_time"  
-elif [ "$choice" -eq 55 ]; then
-     sort -t, -u -k13,13 heart.csv 
-echo "Script Execution Time: $execution_time"
-elif [ "$choice" -eq 56]; then
-     sort -t, -u -k14,14 heart.csv
-echo "Script Execution Time: $execution_time"
 fi
